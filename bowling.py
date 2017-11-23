@@ -1,7 +1,19 @@
 def score(game):
+    """Gets a bowling game scores in a list or string and returns the the total score
+
+    Arguments:
+        game = string or list of chars possible values each char:
+                numbers 1-9, "x", "/", "-"
+
+    Returns:
+        integer of total score
+    """
+
     MAX_SCORE = 10
     MAX_FRAME = 10
+
     game = game.lower()
+
     result = 0
     frame = 1
     in_first_half = True
@@ -29,11 +41,19 @@ def score(game):
         else:
             in_first_half = not in_first_half
 
-
     return result
 
 
 def get_value(char):
+    """A 1 character long string and returns the score it means
+
+    Arguments:
+        char = a 1 character long string
+
+    Returns:
+        integer value of score
+    """
+
     SCORE_TABLE = {
         "1": 1,
         "2": 2,
