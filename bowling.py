@@ -8,7 +8,7 @@ def score(game):
 
     for i in range(len(game)):
         if game[i] == '/':
-            result += MAX_SCORE - last_score
+            result += MAX_SCORE - get_value(game[i-1])
         else:
             result += get_value(game[i])
 
@@ -21,8 +21,6 @@ def score(game):
                     result += MAX_SCORE - get_value(game[i+1])
                 else:
                     result += get_value(game[i+2])
-
-        last_score = get_value(game[i])
 
         if in_first_half is False:
             frame += 1
