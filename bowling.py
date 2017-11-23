@@ -2,8 +2,7 @@ def score(game):
     """Gets a bowling game scores in a list or string and returns the the total score
 
     Arguments:
-        game = string or list of chars possible values each char:
-                numbers 1-9, "x", "/", "-"
+        game = string or list of chars. Valid values each char: numbers 1-9, "x", "/", "-"
 
     Returns:
         integer of total score
