@@ -13,10 +13,8 @@ def score(game):
             result += get_value(game[i])
 
         if frame < MAX_FRAME and get_value(game[i]) == MAX_SCORE:
-            if game[i] == '/':
-                result += get_value(game[i+1])
-            elif game[i] == 'x':
-                result += get_value(game[i+1])
+            result += get_value(game[i+1])
+            if game[i] == 'x':
                 if game[i+2] == '/':
                     result += MAX_SCORE - get_value(game[i+1])
                 else:
